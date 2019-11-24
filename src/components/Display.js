@@ -1,24 +1,41 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Input = styled.input`
-    width: 80%;
-    font-size: 4rem;
-    height: 60px;
-    border: 1px solid black;
-    background-color: white;
-    color: #000000;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 10px;
+const Output = styled.div`
+    height: 4em;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-self: center;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 `;
+
+const Previous = styled.div`
+    margin-right: 1em;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+`;
+
+const Current = styled.div`
+    color: white;
+    font-size: 2.5rem;
+`;
+
 const Display = props => {
-    console.log(props, "display");
-    return <Input type="text" value={props.value} disabled />;
+    const { prevOperation, currentOperation, operator } = props;
+
+    return (
+        <Output>
+            <Previous data-previous-operand>
+                {prevOperation} {operator}
+            </Previous>
+            <Current data-current-operand>{currentOperation}</Current>
+        </Output>
+    );
 };
 
 export default Display;

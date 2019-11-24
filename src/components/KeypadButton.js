@@ -2,62 +2,24 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const KeypadDiv = styled.div`
-    width: 80%;
-    padding: 0;
-    padding-top: 0.9em;
-    height: auto;
-    margin: 0 auto;
+    margin-top: 1em;
     display: grid;
     background: smoke;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: repeat(4, 100px);
 `;
 
-const BasicDiv = styled.div`
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    button {
-        background: white;
-        &:hover {
-            background: blue;
-            color: white;
-        }
-    }
-`;
-
-const OperationsDiv = styled.div`
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-
-    button {
-        background: red;
-        &:hover {
-            background: white;
-            color: black;
-        }
-    }
-`;
-
-// justify-content: center;
-// align-items: center;
 const Button = styled.button`
-    width: 6em;
-    height: 6em;
-    border-radius: 5px;
-    margin: 0.5em;
-    margin-bottom: 0.1em;
-
-    span {
-        font-size: 1.5rem;
-        margin: 1px;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+    background-color: #f6f6f6;
+    &:hover {
+        background: #c4c4ff;
+        color: black;
     }
 `;
 
@@ -66,48 +28,38 @@ const KeypadButton = props => {
         "I",
         "II",
         "III",
+        "AC",
         "IV",
         "V",
         "VI",
+        "+",
         "VII",
         "VIII",
         "IX",
+        "-",
         "X",
         "L",
         "C",
+        "÷",
         "D",
         "M",
+        "DEL",
+        "=",
     ];
-    const operations = ["CE", "+", "-", "/", "*", "="];
+
     return (
         <KeypadDiv>
-            <BasicDiv>
-                {keypads.map((item, i) => (
-                    <Button
-                        className="basic-Button"
-                        key={item}
-                        name={item}
-                        label={item}
-                        value={item}
-                        onClick={props.onClick}
-                    >
-                        <span>{item}</span>
-                    </Button>
-                ))}
-            </BasicDiv>
-            <OperationsDiv operations-div>
-                {operations.map((item, i) => (
-                    <Button
-                        key={item}
-                        name={item}
-                        label={item}
-                        value={item}
-                        onClick={props.onClick}
-                    >
-                        <span>{item}</span>
-                    </Button>
-                ))}
-            </OperationsDiv>
+            {keypads.map((item, i) => (
+                <Button
+                    className="basic-Button"
+                    data-label={item}
+                    key={item}
+                    value={item}
+                    onClick={props.onClick}
+                >
+                    {item}
+                </Button>
+            ))}
         </KeypadDiv>
     );
 };
