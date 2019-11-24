@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Test should renders without crashing 1`] = `
+<div
+  className="css-198qf24"
+>
+  <div
+    className="css-ub5z1o"
+  >
+    <h2>
+      Roman Calculator
+    </h2>
+  </div>
+  <div
+    className="css-jsz1sl"
+  >
+    <div
+      className="css-vb37s6"
+    >
+      <div
+        className="css-nrsn95"
+        data-previous-operand={true}
+      >
+         
+         
+         
+      </div>
+      <div
+        className="css-1jxc83g"
+        data-current-operand={true}
+      >
+         
+      </div>
+    </div>
+    <div
+      className="css-1u2c2og"
+    >
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="I"
+        onClick={[Function]}
+        value="I"
+      >
+        I
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="II"
+        onClick={[Function]}
+        value="II"
+      >
+        II
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="III"
+        onClick={[Function]}
+        value="III"
+      >
+        III
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="AC"
+        onClick={[Function]}
+        value="AC"
+      >
+        AC
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="IV"
+        onClick={[Function]}
+        value="IV"
+      >
+        IV
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="V"
+        onClick={[Function]}
+        value="V"
+      >
+        V
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="VI"
+        onClick={[Function]}
+        value="VI"
+      >
+        VI
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="+"
+        onClick={[Function]}
+        value="+"
+      >
+        +
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="VII"
+        onClick={[Function]}
+        value="VII"
+      >
+        VII
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="VIII"
+        onClick={[Function]}
+        value="VIII"
+      >
+        VIII
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="IX"
+        onClick={[Function]}
+        value="IX"
+      >
+        IX
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="-"
+        onClick={[Function]}
+        value="-"
+      >
+        -
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="X"
+        onClick={[Function]}
+        value="X"
+      >
+        X
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="L"
+        onClick={[Function]}
+        value="L"
+      >
+        L
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="C"
+        onClick={[Function]}
+        value="C"
+      >
+        C
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="÷"
+        onClick={[Function]}
+        value="÷"
+      >
+        ÷
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="D"
+        onClick={[Function]}
+        value="D"
+      >
+        D
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="M"
+        onClick={[Function]}
+        value="M"
+      >
+        M
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="DEL"
+        onClick={[Function]}
+        value="DEL"
+      >
+        DEL
+      </button>
+      <button
+        className="basic-Button css-1kddh5u"
+        data-label="*"
+        onClick={[Function]}
+        value="*"
+      >
+        *
+      </button>
+      <button
+        className="basic-Button css-jvnnqa"
+        data-label="="
+        onClick={[Function]}
+        value="="
+      >
+        =
+      </button>
+    </div>
+  </div>
+</div>
+`;

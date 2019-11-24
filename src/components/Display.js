@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Output = styled.div`
-    height: 4em;
+    height: 5em;
     grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
@@ -17,7 +17,6 @@ const Output = styled.div`
 `;
 
 const Previous = styled.div`
-    margin-right: 1em;
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.5rem;
 `;

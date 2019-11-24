@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeypadButton Component Test should renders without crashing 1`] = `
+<div
+  className="css-1u2c2og"
+>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="I"
+    value="I"
+  >
+    I
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="II"
+    value="II"
+  >
+    II
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="III"
+    value="III"
+  >
+    III
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="AC"
+    value="AC"
+  >
+    AC
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="IV"
+    value="IV"
+  >
+    IV
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="V"
+    value="V"
+  >
+    V
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="VI"
+    value="VI"
+  >
+    VI
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="+"
+    value="+"
+  >
+    +
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="VII"
+    value="VII"
+  >
+    VII
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="VIII"
+    value="VIII"
+  >
+    VIII
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="IX"
+    value="IX"
+  >
+    IX
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="-"
+    value="-"
+  >
+    -
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="X"
+    value="X"
+  >
+    X
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="L"
+    value="L"
+  >
+    L
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="C"
+    value="C"
+  >
+    C
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="÷"
+    value="÷"
+  >
+    ÷
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="D"
+    value="D"
+  >
+    D
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="M"
+    value="M"
+  >
+    M
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="DEL"
+    value="DEL"
+  >
+    DEL
+  </button>
+  <button
+    className="basic-Button css-1kddh5u"
+    data-label="*"
+    value="*"
+  >
+    *
+  </button>
+  <button
+    className="basic-Button css-jvnnqa"
+    data-label="="
+    value="="
+  >
+    =
+  </button>
+</div>
+`;

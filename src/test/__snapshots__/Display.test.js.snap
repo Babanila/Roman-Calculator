@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Component Test should renders without crashing 1`] = `
+<div
+  className="css-vb37s6"
+>
+  <div
+    className="css-nrsn95"
+    data-previous-operand={true}
+  >
+    XL
+     
+    +
+  </div>
+  <div
+    className="css-1jxc83g"
+    data-current-operand={true}
+  >
+    VI
+  </div>
+</div>
+`;

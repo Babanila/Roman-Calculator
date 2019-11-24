@@ -26,7 +26,13 @@ const HeadingDiv = styled.div`
     justify-content: center;
     margin: 0 auto;
     z-index: 100;
+    @media (min-width: 0px) and (max-width: 400px) {
+        font-size: 1rem;
+        height: 3rem;
+        padding: 0;
+    }
 `;
+// display: none;
 
 const CalculatorDiv = styled.div`
     max-height: 100%;
