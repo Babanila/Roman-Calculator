@@ -27,10 +27,10 @@ exports[`KeypadButton Component Test should renders without crashing 1`] = `
   </button>
   <button
     className="basic-Button css-1kddh5u"
-    data-label="AC"
-    value="AC"
+    data-label="+"
+    value="+"
   >
-    AC
+    +
   </button>
   <button
     className="basic-Button css-1kddh5u"
@@ -55,10 +55,10 @@ exports[`KeypadButton Component Test should renders without crashing 1`] = `
   </button>
   <button
     className="basic-Button css-1kddh5u"
-    data-label="+"
-    value="+"
+    data-label="-"
+    value="-"
   >
-    +
+    -
   </button>
   <button
     className="basic-Button css-1kddh5u"
@@ -83,10 +83,10 @@ exports[`KeypadButton Component Test should renders without crashing 1`] = `
   </button>
   <button
     className="basic-Button css-1kddh5u"
-    data-label="-"
-    value="-"
+    data-label="÷"
+    value="÷"
   >
-    -
+    ÷
   </button>
   <button
     className="basic-Button css-1kddh5u"
@@ -111,10 +111,10 @@ exports[`KeypadButton Component Test should renders without crashing 1`] = `
   </button>
   <button
     className="basic-Button css-1kddh5u"
-    data-label="÷"
-    value="÷"
+    data-label="*"
+    value="*"
   >
-    ÷
+    *
   </button>
   <button
     className="basic-Button css-1kddh5u"
@@ -132,24 +132,24 @@ exports[`KeypadButton Component Test should renders without crashing 1`] = `
   </button>
   <button
     className="basic-Button css-1kddh5u"
-    data-label="DEL"
-    value="DEL"
+    data-label="AC"
+    value="AC"
   >
-    DEL
+    AC
   </button>
   <button
     className="basic-Button css-1kddh5u"
-    data-label="*"
-    value="*"
-  >
-    *
-  </button>
-  <button
-    className="basic-Button css-jvnnqa"
     data-label="="
     value="="
   >
     =
+  </button>
+  <button
+    className="basic-Button css-adl3hz"
+    data-label="DELETE"
+    value="DELETE"
+  >
+    DELETE
   </button>
 </div>
 `;

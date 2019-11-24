@@ -39,57 +39,53 @@ const CalculatorDiv = styled.div`
     border: 1px solid #080808;
 `;
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            prevOperation: " ",
-            currentOperation: " ",
-            operator: " ",
-            baseArray: {
-                M: 1000,
-                CM: 900,
-                D: 500,
-                CD: 400,
-                C: 100,
-                XC: 90,
-                L: 50,
-                XL: 40,
-                X: 10,
-                IX: 9,
-                VIII: 8,
-                VII: 7,
-                VI: 6,
-                V: 5,
-                IV: 4,
-                I: 1,
-            },
-        };
-    }
-
+function App() {
+    const [prevOperation, setPrevOperation] = useState(" ");
+    const [currentOperation, setCurrentOperation] = useState(" ");
+    const [operator, setOperator] = useState(" ");
+    const baseArray = {
+        M: 1000,
+        CM: 900,
+        D: 500,
+        CD: 400,
+        C: 100,
+        XC: 90,
+        L: 50,
+        XL: 40,
+        X: 10,
+        IX: 9,
+        VIII: 8,
+        VII: 7,
+        VI: 6,
+        V: 5,
+        IV: 4,
+        I: 1,
+    };
     // Reset to default
-    handleReset = () => this.setState({ prevOperation: " ", currentOperation: " ", operator: " " });
-
-    // Delete or remove the last input
-    handleDelete = message => {
-        const newMessage = message.toString().slice(0, -1);
-        this.setState({ currentOperation: newMessage });
+    const handleReset = () => {
+        setPrevOperation(" ");
+        setCurrentOperation(" ");
+        setOperator(" ");
     };
 
-    handleFirstOperand = operatorInput => {
-        const { currentOperation, prevOperation, baseArray } = this.state;
+    // Delete or remove the last input
+    const handleDelete = message => {
+        const newMessage = message.toString().slice(0, -1);
+        setCurrentOperation(newMessage);
+    };
 
-        prevOperation === " "
-            ? this.setState({
-                  operator: operatorInput,
-                  prevOperation: currentOperation,
-                  currentOperation: "",
-              })
-            : this.handleCompute(prevOperation, currentOperation, operatorInput, baseArray);
+    const handleFirstOperand = operatorInput => {
+        if (prevOperation === " ") {
+            setOperator(operatorInput);
+            setPrevOperation(currentOperation);
+            setCurrentOperation("");
+        } else {
+            handleCompute(prevOperation, currentOperation, operatorInput, baseArray);
+        }
     };
 
     // Compute handler for arithmetics operations
-    handleOperation = (prev, current, opera) => {
+    const handleOperation = (prev, current, opera) => {
         let computeResult;
         switch (opera) {
             case "+":
@@ -110,24 +106,23 @@ class App extends Component {
         return computeResult;
     };
 
-    handleCompute = (first, second, joiner, arr) => {
+    const handleCompute = (first, second, joiner, arr) => {
         const num1 = convertToNumber(arr, first);
         const num2 = convertToNumber(arr, second);
-        const combineNum = this.handleOperation(num1, num2, joiner);
+        const combineNum = handleOperation(num1, num2, joiner);
         if (combineNum <= 0) return "NaN";
         const result = convertToRoman(arr, combineNum);
         return result;
     };
 
-    handleClick = e => {
+    const handleClick = e => {
         e.preventDefault();
-        const { prevOperation, currentOperation, operator, baseArray } = this.state;
         const { value } = e.target;
         const stringifyValue = value.toString();
 
-        if (stringifyValue === "AC") return this.handleReset();
+        if (stringifyValue === "AC") return handleReset();
 
-        if (stringifyValue === "DEL") return this.handleDelete(currentOperation);
+        if (stringifyValue === "DEL") return handleDelete(currentOperation);
 
         // Disable multiple entering of operator(operand) when second parameters is not provided
         if (
@@ -147,47 +142,38 @@ class App extends Component {
                 stringifyValue === "÷") &&
             currentOperation !== " "
         ) {
-            // this.setState({ operator: stringifyValue });
-            return this.handleFirstOperand(stringifyValue);
+            return handleFirstOperand(stringifyValue);
         }
 
         // Handle input from user
         currentOperation == " "
-            ? this.setState({ currentOperation: stringifyValue })
-            : this.setState({ currentOperation: currentOperation + stringifyValue });
+            ? setCurrentOperation(stringifyValue)
+            : setCurrentOperation(currentOperation + stringifyValue);
 
         if (stringifyValue === "=") {
-            return this.setState({
-                currentOperation: this.handleCompute(
-                    prevOperation,
-                    currentOperation,
-                    operator,
-                    baseArray
-                ),
-                prevOperation: " ",
-                operator: " ",
-            });
+            setCurrentOperation(
+                handleCompute(prevOperation, currentOperation, operator, baseArray)
+            );
+            setPrevOperation(" ");
+            setOperator(" ");
         }
     };
 
-    render() {
-        const { prevOperation, currentOperation, operator } = this.state;
-        return (
-            <AppDiv>
-                <HeadingDiv>
-                    <h2>Roman Calculator</h2>
-                </HeadingDiv>
-                <CalculatorDiv>
-                    <Display
-                        prevOperation={prevOperation}
-                        currentOperation={currentOperation}
-                        operator={operator}
-                    />
-                    <KeypadButton onClick={this.handleClick} />
-                </CalculatorDiv>
-            </AppDiv>
-        );
-    }
+    return (
+        <AppDiv>
+            <HeadingDiv>
+                <h2>Roman Calculator</h2>
+            </HeadingDiv>
+            <CalculatorDiv>
+                <Display
+                    prevOperation={prevOperation}
+                    currentOperation={currentOperation}
+                    operator={operator}
+                />
+                <KeypadButton onClick={handleClick} />
+            </CalculatorDiv>
+        </AppDiv>
+    );
 }
 
 export default App;

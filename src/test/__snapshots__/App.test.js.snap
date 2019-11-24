@@ -61,11 +61,11 @@ exports[`App Component Test should renders without crashing 1`] = `
       </button>
       <button
         className="basic-Button css-1kddh5u"
-        data-label="AC"
+        data-label="+"
         onClick={[Function]}
-        value="AC"
+        value="+"
       >
-        AC
+        +
       </button>
       <button
         className="basic-Button css-1kddh5u"
@@ -93,11 +93,11 @@ exports[`App Component Test should renders without crashing 1`] = `
       </button>
       <button
         className="basic-Button css-1kddh5u"
-        data-label="+"
+        data-label="-"
         onClick={[Function]}
-        value="+"
+        value="-"
       >
-        +
+        -
       </button>
       <button
         className="basic-Button css-1kddh5u"
@@ -125,11 +125,11 @@ exports[`App Component Test should renders without crashing 1`] = `
       </button>
       <button
         className="basic-Button css-1kddh5u"
-        data-label="-"
+        data-label="÷"
         onClick={[Function]}
-        value="-"
+        value="÷"
       >
-        -
+        ÷
       </button>
       <button
         className="basic-Button css-1kddh5u"
@@ -157,11 +157,11 @@ exports[`App Component Test should renders without crashing 1`] = `
       </button>
       <button
         className="basic-Button css-1kddh5u"
-        data-label="÷"
+        data-label="*"
         onClick={[Function]}
-        value="÷"
+        value="*"
       >
-        ÷
+        *
       </button>
       <button
         className="basic-Button css-1kddh5u"
@@ -181,27 +181,27 @@ exports[`App Component Test should renders without crashing 1`] = `
       </button>
       <button
         className="basic-Button css-1kddh5u"
-        data-label="DEL"
+        data-label="AC"
         onClick={[Function]}
-        value="DEL"
+        value="AC"
       >
-        DEL
+        AC
       </button>
       <button
         className="basic-Button css-1kddh5u"
-        data-label="*"
-        onClick={[Function]}
-        value="*"
-      >
-        *
-      </button>
-      <button
-        className="basic-Button css-jvnnqa"
         data-label="="
         onClick={[Function]}
         value="="
       >
         =
+      </button>
+      <button
+        className="basic-Button css-adl3hz"
+        data-label="DELETE"
+        onClick={[Function]}
+        value="DELETE"
+      >
+        DELETE
       </button>
     </div>
   </div>

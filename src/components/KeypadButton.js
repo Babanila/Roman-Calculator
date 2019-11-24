@@ -36,12 +36,12 @@ const Button = styled.button`
 
 const Button2 = styled.button`
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 2rem;
     color: red;
     outline: none;
     height: 1.5em;
-    width: 8em;
-    margin: 0.1em 0.1em 0.1em 0.15em;
+    width: 12em;
+    margin: 0.1em 0.1em 0.1em 0.3em;
     border-radius: 0.5em;
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@ const Button2 = styled.button`
     }
 
     @media (min-width: 0px) and (max-width: 420px) {
-        width: 6.2em;
+        width: 300px;
         height: 1.2em;
     }
 `;
@@ -64,23 +64,23 @@ const KeypadButton = props => {
         "I",
         "II",
         "III",
-        "AC",
+        "+",
         "IV",
         "V",
         "VI",
-        "+",
+        "-",
         "VII",
         "VIII",
         "IX",
-        "-",
+        "÷",
         "X",
         "L",
         "C",
-        "÷",
+        "*",
         "D",
         "M",
-        "DEL",
-        "*",
+        "AC",
+        "=",
     ];
 
     return (
@@ -98,12 +98,12 @@ const KeypadButton = props => {
             ))}
             <Button2
                 className="basic-Button"
-                data-label="="
-                key="="
-                value="="
+                data-label="DELETE"
+                key="DELETE"
+                value="DELETE"
                 onClick={props.onClick}
             >
-                =
+                DELETE
             </Button2>
         </KeypadDiv>
     );
