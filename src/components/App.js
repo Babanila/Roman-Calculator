@@ -9,7 +9,7 @@ const AppDiv = styled.div`
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100%;
     box-sizing: border-box;
     font-family: Gotham Rounded, sans-serif;
     font-weight: normal;
@@ -24,9 +24,12 @@ const HeadingDiv = styled.div`
     flex-direction: row;
     text-align: center;
     justify-content: center;
+    margin: 0 auto;
+    z-index: 100;
 `;
 
 const CalculatorDiv = styled.div`
+    max-height: 100%;
     border: 1px solid #080808;
 `;
 
@@ -74,12 +77,12 @@ class App extends Component {
             ? this.setState({
                   operator: operatorInput,
                   prevOperation: currentOperation,
-                  //   prevOperation: `${currentOperation}  ${operatorInput}`,
                   currentOperation: "",
               })
             : this.handleCompute(prevOperation, currentOperation, operatorInput, baseArray);
     };
 
+    // Compute handler for arithmetics operations
     handleOperation = (prev, current, opera) => {
         let computeResult;
         switch (opera) {
@@ -105,6 +108,7 @@ class App extends Component {
         const num1 = convertToNumber(arr, first);
         const num2 = convertToNumber(arr, second);
         const combineNum = this.handleOperation(num1, num2, joiner);
+        if (combineNum <= 0) return "NaN";
         const result = convertToRoman(arr, combineNum);
         return result;
     };

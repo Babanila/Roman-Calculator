@@ -6,12 +6,14 @@ const Output = styled.div`
     grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    z-index: 70;
 `;
 
 const Previous = styled.div`
