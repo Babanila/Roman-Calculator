@@ -1,5 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
-import useDeepCompareEffect from "use-deep-compare-effect";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import KeypadButton from "./KeypadButton";
 import Display from "./Display";
@@ -32,7 +31,6 @@ const HeadingDiv = styled.div`
         padding: 0;
     }
 `;
-// display: none;
 
 const CalculatorDiv = styled.div`
     max-height: 100%;
@@ -43,6 +41,8 @@ function App() {
     const [prevOperation, setPrevOperation] = useState(" ");
     const [currentOperation, setCurrentOperation] = useState(" ");
     const [operator, setOperator] = useState(" ");
+
+    // Array used as standard for conversion
     const baseArray = {
         M: 1000,
         CM: 900,
@@ -61,6 +61,7 @@ function App() {
         IV: 4,
         I: 1,
     };
+
     // Reset to default
     const handleReset = () => {
         setPrevOperation(" ");
@@ -122,7 +123,7 @@ function App() {
 
         if (stringifyValue === "AC") return handleReset();
 
-        if (stringifyValue === "DEL") return handleDelete(currentOperation);
+        if (stringifyValue === "DELETE") return handleDelete(currentOperation);
 
         // Disable multiple entering of operator(operand) when second parameters is not provided
         if (
